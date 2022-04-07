@@ -10,6 +10,7 @@ export default function Subscription() {
   let { tokenLogin } = useContext(UserContext);
   let tokenLocalStorage = localStorage.getItem("token");
   let navigate = useNavigate();
+
   //
 
   //
@@ -38,7 +39,6 @@ export default function Subscription() {
   }, []);
 
   function choosePlan(e) {
-    console.log(e.target.id);
     navigate(`/subscription/${e.target.id}`, { replace: true });
   }
 

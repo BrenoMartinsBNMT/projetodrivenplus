@@ -8,7 +8,7 @@ import { TailSpin } from "react-loader-spinner";
 import { UserContext } from "../../components/context/context";
 
 export default function PaySubscription() {
-  let { setSubChoose, subChoose } = useContext(UserContext);
+  let { setSubChoose } = useContext(UserContext);
   let tokenLocalStorage = localStorage.getItem("token");
   let { idPlan } = useParams();
   let [dataPlan, setDataPlan] = useState("");
@@ -52,7 +52,7 @@ export default function PaySubscription() {
     let promisse = axios.post(
       "https://mock-api.driven.com.br/api/v4/driven-plus/subscriptions",
       {
-        membershipId: 1,
+        membershipId: idPlan,
         cardName: nameOnCard,
         cardNumber: cardNumber,
         securityNumber: securityCode,
@@ -67,14 +67,15 @@ export default function PaySubscription() {
     );
     promisse.then((element) => {
       setSubChoose(element.data);
-      navigate("/", { replace: true });
+
+      navigate("/home", { replace: true });
     });
     promisse.catch((element) =>
       alert(`${element}
 preencha os campos novamente ou recarregue a página`)
     );
   }
-  console.log(subChoose);
+
   return (
     <>
       {dataPlan === "" ? (
@@ -98,7 +99,9 @@ preencha os campos novamente ou recarregue a página`)
                 >
                   Não
                 </button>
-                <button className="confirm-ok">Sim</button>
+                <button className="confirm-ok" onClick={paySubscribe}>
+                  Sim
+                </button>
               </div>
             </style.ConfirmPay>
           </style.ModalPay>

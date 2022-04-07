@@ -5,11 +5,13 @@ import { useState } from "react";
 import SignUp from "./Sign-up";
 import Subscription from "./subscriptions";
 import PaySubscription from "./PaySubscription";
+import Home from "./Home";
 
 export default function App() {
   let [tokenLogin, setTokenLogin] = useState("");
   let [planChoosed, setPlanChoosed] = useState("");
   let [subChoose, setSubChoose] = useState("");
+
   return (
     <UserContext.Provider
       value={{
@@ -27,6 +29,7 @@ export default function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="subscription/:idPlan" element={<PaySubscription />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </UserContext.Provider>

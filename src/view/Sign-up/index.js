@@ -22,7 +22,6 @@ export default function SignUp() {
       }
     );
     promisse.then((element) => {
-      console.log(element);
       navigate("/", { replace: true });
     });
     promisse.catch((element) => alert(element));

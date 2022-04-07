@@ -7,24 +7,22 @@ export const MainPaySubscription = styled.div`
 
   background: #0e0e13;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   a {
-    position: relative;
-    top: 5%;
-    right: 38%;
+    width: 80vw;
   }
   span {
     font-size: 36px;
     color: #ffffff;
   }
   form {
-    position: relative;
-    top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   button {
-    position: relative;
-    top: 19%;
     left: 10%;
     padding: 0px;
     border: none;
@@ -48,8 +46,10 @@ export const MainPaySubscription = styled.div`
 `;
 
 export const LogoPaySubscrpition = styled.div`
-  position: relative;
-  top: 9%;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   p {
     font-family: "Roboto";
     font-style: normal;
@@ -62,9 +62,10 @@ export const LogoPaySubscrpition = styled.div`
 `;
 
 export const BenefitsPlan = styled.div`
-  position: relative;
-  top: 13%;
-  right: 15%;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -74,9 +75,6 @@ export const BenefitsPlan = styled.div`
   color: #ffffff;
   span {
     font-size: 18px;
-    position: relative;
-    top: 0%;
-    right: 0%;
   }
   ol {
     margin-left: 18px;
@@ -85,10 +83,10 @@ export const BenefitsPlan = styled.div`
 `;
 
 export const PricePlan = styled.div`
-  position: relative;
-  top: 16%;
-  right: 12%;
-
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   p {
     font-family: "Roboto";
     font-style: normal;
@@ -100,9 +98,13 @@ export const PricePlan = styled.div`
   }
 `;
 export const InfosCardPay = styled.div`
-  position: relative;
-  top: 19%;
-  left: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   input {
     border: none;
     outline: none;
@@ -128,10 +130,9 @@ export const InfosCardPay = styled.div`
 `;
 
 export const SecurityInfoCard = styled.div`
-  position: relative;
-  top: 19%;
-  left: 10%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   input {
     border: none;
     outline: none;
@@ -167,14 +168,16 @@ justify-content: center;
 }
 `;
 export const ConfirmPay = styled.div`
+  display: flex;
+  padding: 0px 10px 0px 10px;
   width: 248px;
   height: 210px;
-
   background: #ffffff;
   border-radius: 12px;
+  flex-direction: column;
+  justify-content: space-around;
   p {
-    padding-top: 15%;
-    font-family: "Roboto";
+    font-family: Roboto;
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -185,9 +188,6 @@ export const ConfirmPay = styled.div`
   }
   .buttons-confirm {
     display: flex;
-    position: relative;
-    top: 20%;
-    right: 7%;
   }
   .confirm-not {
     margin: 7px;
